@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <%- include('../partials/head.ejs') %>
+            <title>My CF Viz</title>
+    </head>
+
+    <body>
+        <header>
+            <h2>Handle : ------</h2>
+            <h1>CF Stats</h1>
+            <button id="btn">
+                Reload
+            </button>
+        </header>
+        <main>
+            <div class="main-div">
+                <div class="only-tag">
+                    <div>
+                        <h1>Single Tag : </h1>
+                        <hr>
+                    </div>
+                    <div class="category">
+                        <% singleTag.forEach(element=> { %>
+                            <div class="single-category">
+                                <%= element.tag %> = <%= element.count %>
+                            </div>
+                            <% }) %>
+                    </div>
+
+                </div>
+                <div class="all-tag">
+                    <div>
+                        <h1>Multiple Tag : </h1>
+                        <hr>
+                    </div>
+                    <div class="multi-category">
+                        <% multipleTag.forEach(element=> { %>
+                            <div class="single-multi-category">
+                                <%= element.tag %> = <%= element.count %>
+                            </div>
+                        <% }) %>
+                    </div>
+                </div>
+                <div class="number-stat">
+                    <h1>Some Stats: </h1>
+                    <hr>
+                    <div class="stat">
+
+                        <h3>Total Submission = <%= totalSubmitted  %>  </h3>
+                        <h3>Total Solved = <%= totalSolved  %>  </h3>
+                        <br>
+                        <h3>Today Solved  = <%= today.size  %>  </h3>
+                        <h3>Last 3 days Solved  = <%= last3Day.size   %>  </h3>
+                        <h3>Last week Solved (from Saturday)  = <%= lastWeek.size   %>  </h3>
+                        <h3>This Month Solved  = <%= lastMonth.size   %>  </h3>
+                        <br>
+                        <h3>Difficulty Wise Solved: </h3>
+                        <br>
+                        <hr width="50%">
+                        <% problemGrade.forEach(element => { %>
+                            <h2> <%= element.tag %>   = <%= element.count %>  </h2>
+                        <% }) %>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <%- include('../partials/footer'); %>
+        </footer>
+    </body>
+
+</html>
