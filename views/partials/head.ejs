@@ -1,120 +1,92 @@
 <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
 
-    body {
-        background-color: #171c2a;
-        color: rgba(255, 255, 255, 0.822);
-    }
+body {
+    width: 100;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* 
+    justify-content:center; 
+    align-items:center;   */
 
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #252d42c4;
-        height: 50px;
-        padding: 0 16px;
-    }
+    background-color: #202636;
+    color: white;
+    /* margin: 15px auto; */
+}
+.head{
+    background-color: #091335;
+    width: 95vw;
+    margin: 8px auto ;
+    padding:5px 0;
+    text-align: center;
+}
+.main {
+    margin: 0 auto;
+    width: 95vw;
+    display: flex;
+    background-color: black;
+    min-height: 85vh;
+}
+.common-section {
+    height: auto;
+    padding: 8px;
+}
+.multiSection {
+    width: 35%;
+    background-color: #1f1d36;
+}
+.singleSection {
+    width: 35%;
+    background-color: #3f3351;
+}
+.stats {
+    width: 30%;
+    background-color: #022c43;
+}
+.stylishBar {
+    width: 80%;
+    height: 4px;
+    background-color: aqua;
+    border-radius: 20px;
+    /* margin: 0 auto;  */
+}
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+}
+.section-data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.data {
+    display: inline-block;
+    font-size: 18px;
+    width: fit-content;
+    padding: 6px 10px;
+    margin: 5px 3px;
+    border-radius: 5px;
+    background-color: #88304e;
+}
 
-    #btn {
-        padding: 3px 3vh;
-        font-size: 1.2rem;
-        border-radius: 8px;
-    }
+.footer{
 
-    .main-div {
-        height: calc(95vh - 50px);
-        width: 90vw;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: stretch;
-        /* background-color: rgb(243, 77, 12); */
-        /* padding: 0 8px; */
-        /* column-gap: 10px; */
-    }
-    hr{
-        height: 3px;
-        width: 95%;
-        background-color: rgb(134, 218, 38);
-        border: none;
-        border-radius: 5px;
-        margin-bottom: 16px;
-    }
-    .only-tag{
-        background-color: #1d1d41;
-        flex-grow: 2;
-        /* overflow: hidden; */
-         display: flex;
-        flex-direction: column;
-        justify-content: flex-start; 
-       
-    }
-    .only-tag h1,.all-tag h1,.number-stat h1{
-        padding:8px;
-        margin: 0;
-        /* background-color: black; */
-        
-    }
-    .all-tag{
-        /* background-color: rgba(198, 228, 90, 0.445); */
-        flex-grow: 2;
-        height: 100%;
-        /* max-height: calc(95vh - 50px); */
-        /* border: 1px solid red; */
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-
-    }
-    .number-stat{
-        background-color: rgb(36, 11, 59);
-        flex-grow: 1;
-        padding: 16px;
-    }
-    .category{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        /* background-color: #031031c4; */
-    }
-    .multi-category{
-        /* border: 1px solid lime; */
-        height: 85%;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around; 
-    }
-    .single-multi-category{
-        /* background-color: #031031c4; */
-        padding: 5px;
-        text-align: center;
-        width: fit-content;
-        margin-bottom: 10px;
-        border-radius: 8px;
-    }
-    .single-category{
-        background-color: #031031c4;
-        padding: 10px;
-        text-align: center;
-        width: 90%;
-        margin-bottom: 8px;
-        border-radius: 8px;
-    }
-    footer {
-        /* border: 2px solid yellow; */
-        text-align: center;
-        height: 5vh;
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        flex-direction: column;
-    }
+    background-color: #091335;
+    text-align: center;
+    width: 95vw;
+    margin: 8px auto ;
+    padding : 8px;
+}
+.stats{
+    /* display: block; */
+    color: #83BD75;
+    /* flex-direction: column; */
+}
 </style>
